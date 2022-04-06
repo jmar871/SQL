@@ -1,0 +1,19 @@
+CREATE TABLE CLOTHING (ID INTEGER PRIMARY KEY, NAME TEXT, QUANTITY INTEGER, price integer, size text);
+INSERT INTO CLOTHING values (1, "skirts", 6, 15, "SML");
+INSERT INTO CLOTHING VALUES (2, "blouses",10, 20, "SML");
+INSERT INTO CLOTHINg VALUES (3, "jeans", 25, 35, "SML");
+insert into clothing values (4, "sweaters", 20, 40,"SML");
+insert into clothing values (5, "tshirts", 35,15,"SML");
+insert into clothing values (6, "shorts",15, 18,"SML");
+insert into clothing values (7, "bra", 30, 15, "SML");
+insert into clothing values (8,"underwear", 30, 10,"SML");
+insert into clothing values (9, "necklace", 12, 7, "ONESIZE");
+insert into clothing values (10,"body lotion",50, 12.50, "large");
+insert into clothing values (11, "body spray", 50, 14.50, "large");
+insert into clothing values (12, "sneakers", 20, 25, "SML");
+insert into clothing values (13, "SANDALS", 20, 22.50, "SML"); 
+insert into clothing values (14,"SUNGLASSES", 40, 13.50, "ONESIZE");
+insert into clothing values (15,"RINGS", 60,7.50,"ONESIZE");
+Select * from clothing group by price;
+
+Select sum(price*quantity) from clothing order by price;
