@@ -1,0 +1,28 @@
+
+
+select AVG(fertility_rate) FROM countries; 
+select MIN(median_age) from countries;
+select MAX(population) FROm countries;
+
+select name, SUM(median_age) AS ages_greater_35 from countries group by name having SUM(median_age)>35;
+
+SELECT name, median_age,
+CASE 
+ WHEN median_age <25 then "Y"
+ WHEN median_age <35 then "M"
+ WHEN median_age <45 then "E"
+ ELSE "OTHER"
+ END AS "AGE_group"
+ FROM countries
+ group by "AGE_group";
+ 
+ SELECT name, population, population_change FROM countries
+ where population >500000 AND population_change <200000;
+ 
+ SELECT name, fertility_rate, percent_of_world_pop from countries
+ where fertility_rate =2 or percent_of_world_pop > 1.2
+ 
+ 
+ 
+ 
+
