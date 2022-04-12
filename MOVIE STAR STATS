@@ -1,0 +1,45 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE movie_stars (id INTEGER PRIMARY KEY, name TEXT, age INTEGER, spouse TEXT, hometown TEXT, horoscope_sign TEXT, NETWORTH TEXT, CHILDREN INTEGER, HEIGHT INTEGER);
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+ VALUES ( "TOM HANKS", "65", "rita wilson", "CONCORD, CALIFORNIA", "CANCER", "FOUR HUNDRED MILLION", "4", "6'0");
+
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+VALUES ("RITA WILSON", "65", "tom hank","LOS ANGELES, CALIFORNIA", "SCORPIO", "ONE HUNDRED MILLION", "2", "5'7");
+
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+
+VALUES ("WILL SMITH", "53", "jada pinkett Smith", "PHILADELPHIA, PA", "LIBRA", "THREE HUNDRED FIFTY MILLION", "3", "6'2");
+
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+VALUES ("JADA PINKETT SMITH", "50", "will smith", "BALTIMORE, MARYLAND", "VIRGO", "FIFTY MILLION", "2", "5'0");
+
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+VALUES ("RYAN GOSLING", "41", "eva mendes", "LONDON, CANADA", "SCORPIO", "SEVENTY MILLION", "2", "6'0");
+
+INSERT INTO movie_stars (name, age, spouse,hometown, horoscope_sign, NETWORTH, CHILDREN, HEIGHT)
+VALUES ("EVA MENDES", "48", "ryan gosling", "MIAMI, FLORIDA", "PISCES", "TWENTY MILLION", "2", "5'6");
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, STAR_ID INTEGER, movie_TITLE TEXT);
+
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("1", "FOREST GUMP");
+
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("2", "NOW AND THEN");
+
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("3", "HITCHED");
+
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("4", "GIRLS TRIP");
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("5", "THE NOTEBOOK");
+
+INSERT INTO movies ( STAR_ID, movie_TITLE)
+VALUES ("6", "HITCHED");
+
+SELECT movie_stars.name, movies.movie_TITLE FROM movie_stars JOIN movies on movie_stars.id= movies.STAR_ID;
+
+
+SELECT movie_stars.name, movies.movie_TITLE from movie_stars JOIN movies on movie_stars.id=movies.STAR_ID WHERE movie_TITLE="HITCHED";
